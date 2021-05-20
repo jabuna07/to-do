@@ -5,18 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-      <%= htmlWebpackPlugin.options.title %>
+      Task 2
     </title>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/24dacea17b.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <h1>Frontend Boilerplate</h1>
-    <div class="banner">
-      Hello world
+    <div class="to-do">
+      <!--header portion-->
+      <div class="to-do__header">
+        <input type="checkbox" class="to-do__header__checkbox" name="checkBox2" checked />
+        <p class="to-do__header__checkbox__text"><u>My Todo-s</u></p>
+      </div>
+      <!--Adding new to-do bar-->
+      <div class="addBar">
+        <div class="addBar__wrapper">
+          <div class="addBar__wrapper__left">Add new..</div>
+        </div>
+        <div class="wrapper">
+          <button type="button" class="addBar__wrapper__right">Add</button>
+        </div>
+      </div>
+
+      <!--container divided into two-->
+
+      <div class="to-do-container">
+        <div class="container-content">
+          <div class="content-left">
+            <div class="container-wrapper">
+              <div class="top-wrapper">
+                <div class="wrapper-text">
+                  <input type="checkbox" class="to-do-signup-checkbox" checked />
+                  <label>Buy groceries for next week</label>
+                  <div class="wrapper-button">
+                    <div class="button">
+                      <div class="button-edit">
+                        <img src="images/edit.svg" alt="edit-todo" style="margin-right: 5px;" />
+                        <span class="tooltip-edit">Edit</span>
+                      </div>
+                    </div>
+                    <div class="button">
+                      <div class="button-delete">
+                        <img src="images/delete.svg" alt="delete-todo" />
+                        <span class="tooltip-delete">Remove</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="created-date">
+                    <img src="images/info.svg" alt="Created-date" />
+                    <span class="tooltip-info">Created date</span>
+                    <p class="date">28th Jun 2020</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Container for renew car insurance-->
+            <div class="container-wrapper">
+              <div class="down-wrapper">
+                <div class="wrapper-text">
+                  <input type="checkbox" class="to-do-signup-checkbox" />
+                  <label>Renew car insurance</label>
+                  <div class="wrapper-button">
+                    <div class="button">
+                      <div class="button-edit">
+                        <img src="images/edit.svg" alt="edit-todo" style="margin-right: 5px;" />
+                        <span class="tooltip-edit">Edit</span>
+                      </div>
+                    </div>
+                    <div class="button">
+                      <div class="button-delete">
+                        <img src="images/delete.svg" alt="delete-todo" />
+                        <span class="tooltip-delete">Remove</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="created-date">
+                    <img src="images/info.svg" alt="Created-date" />
+                    <span class="tooltip-info">Created date</span>
+                    <p class="date">28th Jun 2020</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Right container portion-->
+        <div class="container-content">
+          <div class="content-right">
+            <div class="selector">
+              <div class="selector-div">
+                <div class="selector-list">
+                  <label>Filter</label>
+                  <select class="selector-list-filterList">
+                    <option value="About">About</option>
+                    <option value="All">All</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Active">Active</option>
+                    <option value="Due date">Has a due date</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!--Selector on filter and sort-->
+            <div class="selector">
+              <div class="selector-list">
+                <label>Sort</label>
+                <select class="selector-list-sortList">
+                  <option value="Due date">Due date</option>
+                  <option value="Added date">Added date</option>
+                </select>
+              </div>
+            </div>
+            <div class="due-date">
+              <div class="text">
+                <img src="images/due-date.svg" alt="Due-date-icon" style="margin: 8px 0px 0px 5px;" />
+                <span class="tooltiptext">Due on date</span>
+                <p class="due-date-text">28th Jun 2020</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Div for signup portion-->
+      <div class="to-do-signup">
+        <input type="checkbox" class="to-do-signup-checkbox" />
+        <label>Signup for online courses</label>
+      </div>
     </div>
   </body>
 </html>

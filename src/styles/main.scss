@@ -30,8 +30,382 @@
 @import 'components/button';
 @import 'components/checkbox';
 
-.banner {
-  height: 500px;
-  background-color: teal;
-  @include slanted-edge(after, false, 3deg);
+//body and header portion//
+.to-do {
+  height: 650px;
+  width: 1500px;
+  margin: 200px;
+  background-color: #e5e5e5;
+}
+.to-do {
+  &__header {
+    height: 80px;
+    width: 300px;
+    top: 20px;
+    display: flex;
+    position: relative;
+    margin-left: 550px;
+    margin-bottom: 35px;
+
+    &__checkbox {
+      margin-top: 10px;
+      height: 55px;
+      position: absolute;
+      width: 55px;
+
+      &__text {
+        margin-left: 70px;
+        color: #187bf2;
+        position: absolute;
+        top: 15px;
+        font-size: 46px;
+      }
+    }
+  }
+}
+
+//Add Bar portion//
+.addBar {
+  height: 100px;
+  width: 1300px;
+  margin-left: 100px;
+  background-color: white;
+  font-family: Roboto;
+  font-weight: 400;
+  display: flex;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__wrapper {
+    width: 50%;
+
+    &__left {
+      font-size: 30px;
+      color: #000;
+      margin: 32px;
+    }
+    &__right {
+      background-color: #187bf2;
+      font-size: 20px;
+      color: white;
+      margin: 24px 25px 0px 520px;
+      height: 50px;
+      width: 90px;
+      border-radius: 5px;
+    }
+  }
+}
+
+//creating a container//
+.to-do-container {
+  height: 300px;
+  margin-top: 30px;
+  border-top: 1px solid #b0b3b6;
+  margin-left: 35px;
+  margin-right: 35px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-content {
+  width: 50%;
+  height: 300px;
+}
+
+.content-left {
+  height: 200px;
+  margin-top: 100px;
+  font-family: Roboto;
+  font-family: Roboto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.container-wrapper {
+  width: 100%;
+  height: 100px;
+}
+
+.top-wrapper {
+  margin-top: 25px;
+  height: 50px;
+  display: flex;
+  position: relative;
+}
+
+.wrapper-button {
+  position: absolute;
+  top: 10px;
+  margin-left: 280px;
+  visibility: hidden;
+  width: 120px;
+}
+
+.wrapper-text {
+  width: 663px;
+}
+
+//Tooltip in button//
+.wrapper-text:hover > .wrapper-button {
+  visibility: visible;
+}
+
+.button-edit {
+  position: relative;
+}
+
+.button-edit .tooltip-edit {
+  visibility: hidden;
+  width: 50px;
+  background-color: black;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px 0px;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 27px;
+  left: -20px;
+}
+
+.button-edit .tooltip-edit::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.button-edit:hover .tooltip-edit {
+  visibility: visible;
+}
+
+.created-date {
+  position: relative;
+  visibility: hidden;
+  height: 30px;
+  width: 200px;
+  margin-left: 280px;
+}
+
+.date {
+  position: absolute;
+  top: 6px;
+  font-size: 15px;
+  margin-left: 30px;
+}
+
+.wrapper-text:hover > .created-date {
+  visibility: visible;
+}
+
+.created-date:hover > .tooltip-info {
+  visibility: visible;
+}
+
+.created-date {
+  position: relative;
+}
+
+.created-date .tooltip-info {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 25px;
+  left: -50px;
+}
+
+.created-date .tooltip-info::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.created-date:hover .tooltip-info {
+  visibility: visible;
+}
+
+.button-delete {
+  position: relative;
+}
+
+.button-delete .tooltip-delete {
+  visibility: hidden;
+  width: 80px;
+  background-color: black;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px 0px;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 27px;
+  left: -30px;
+}
+
+.button-delete .tooltip-delete::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.button-delete:hover .tooltip-delete {
+  visibility: visible;
+}
+
+.down-wrapper {
+  margin-top: 25px;
+  height: 50px;
+  display: flex;
+  position: relative;
+}
+
+//Right container//
+.content-right {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  height: 240px;
+}
+
+//Filter and sort scroller//
+
+.selector {
+  width: 35%;
+  margin-top: 20px;
+  height: 60px;
+  margin-left: 30px;
+
+  &-list {
+    font-family: Roboto;
+    font-size: 20px;
+
+    &-filterList {
+      height: 40px;
+      border-radius: 5px;
+      background-color: white;
+      margin-left: 20px;
+      font-size: 20px;
+      font-family: Roboto;
+      padding-left: 10px;
+      width: 140px;
+    }
+
+    &-sortList {
+      height: 40px;
+      width: 140px;
+      border-radius: 5px;
+      padding-left: 10px;
+      font-family: Roboto;
+      margin-left: 20px;
+      font-size: 20px;
+      background-color: white;
+    }
+  }
+}
+
+//Due date sh
+.due-date {
+  height: 50px;
+  width: 200px;
+  margin-top: 110px;
+  margin-left: 150px;
+  font-family: Roboto;
+  font-size: 20px;
+  background-color: white;
+  position: relative;
+  display: inline-block;
+  line-height: 50px;
+  border-radius: 3px;
+}
+
+.text {
+  position: absolute;
+  height: 40px;
+  width: 200px;
+  margin-top: 5px;
+}
+
+.due-date-text {
+  position: absolute;
+  margin-left: 40px;
+
+  top: -4px;
+  height: 40px;
+  width: 200px;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  line-height: 30px;
+  padding: 5px 0px;
+  background-color: black;
+  color: #fff;
+  font-size: 20px;
+  margin-left: -100px;
+  margin-top: 45px;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltiptext::after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.text:hover .tooltiptext {
+  visibility: visible;
+}
+
+//Signup portion
+
+.to-do-signup {
+  height: 50px;
+  background-color: white;
+  margin-bottom: auto;
+  font-family: Roboto;
+  width: 900px;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 10px 450px 24px 85px;
+
+  &-checkbox {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 20px;
+    height: 20px;
+  }
 }
